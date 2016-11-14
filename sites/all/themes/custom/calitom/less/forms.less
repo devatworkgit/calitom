@@ -1,0 +1,138 @@
+.main-container {
+  .form-group{
+    margin-bottom: 20px;
+    .form-control {
+      background-color: @grey;
+      min-height: 45px;
+      border: none;
+      box-shadow: none;
+      border-radius: 0;
+      font-size: 15px;
+      font-size: 20px;
+    }
+    &.has-error .form-control{
+      border-color: #a94442;
+    }
+  }
+  .form-type-managed-file {
+    margin-bottom: 20px !important;
+    font-size: 20px;
+    .control-label {
+      display: block;
+      margin-bottom: 10px;
+    }
+    .form-managed-file {
+      position: relative;
+      display: block;
+      .btn {
+        padding: 11px 12px;
+        color: @white;
+        background-color: @violet;
+        border-color: @violet;
+        border-radius: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        &:hover, &:focus {
+          background-color: @light-violet;
+          border-color: @light-violet;
+          color: @white;
+        }
+      }
+      .form-control {
+        width: 100%;
+        &.error {
+          border-color: #a94442;
+        }
+      }
+    }
+  }
+  .form-type-markup {
+    float: left;
+    width: 100%;
+    .prefix {
+      float: left;
+      margin-right: 10px;
+    }
+    h3 {
+      color: @violet;
+      border-bottom: 2px solid @grey;
+      padding-bottom: 5px;
+    }
+    .wrapper {
+      border: 2px solid @grey;
+      padding: 15px;
+      border-radius: 0;
+      clear: both;
+    }
+  }
+  .form-type-radios {
+    min-height: 45px;
+    font-size: 20px;
+    .radio {
+      input {
+        display: none;
+      }
+      label {
+        margin: 0;
+        font-weight: 400;
+        width: 100%;
+        cursor: pointer;
+        padding: 10px;
+        padding-left: 40px;
+        background-image: url('../images/radio-unchecked.png');
+        background-repeat: no-repeat;
+        background-position: center left 10px;
+      }
+      input[type="radio"]:not(old):checked + label   {
+        background-image: url('../images/radio-checked.png');
+      }
+    }
+  }
+  .form-type-checkboxes {
+    min-height: 45px;
+    font-size: 20px;
+    .checkbox {
+      input {
+        display: none;
+      }
+      label {
+        margin: 0;
+        font-weight: 400;
+        width: 100%;
+        cursor: pointer;
+        padding: 10px;
+        padding-left: 40px;
+        background-image: url('../images/checkbox-unchecked.png');
+        background-repeat: no-repeat;
+        background-position: center left 10px;
+      }
+      input[type="checkbox"]:not(old):checked + label   {
+        background-image: url('../images/checkbox-checked.png');
+      }
+    }
+  }
+  .form-actions {
+    padding-left: 15px;
+    padding-right: 15px;
+    float: left;
+    .btn {
+      padding: 5px 10px;
+      color: @white;
+      background-color: @light-green;;
+      border: none;
+      border-radius: 0;
+      font-size: 22px;
+      font-family: @slimsansserif-bold;
+      text-transform: uppercase;
+      &:hover, &:focus {
+        background-color: @light-violet;
+        border-color: @light-violet;
+        color: @white;
+      }
+    }
+  }
+  div.webform-confirmation + div.links {
+    display: none;
+  }
+}

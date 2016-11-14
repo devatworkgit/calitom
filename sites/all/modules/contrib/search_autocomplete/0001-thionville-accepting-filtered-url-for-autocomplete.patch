@@ -1,0 +1,25 @@
+From aba785d9f7fa08bcdf3f3f1d6c3594b08b0c1e51 Mon Sep 17 00:00:00 2001
+From: Ion <macaria_ion@yahoo.com>
+Date: Wed, 31 Aug 2016 14:39:48 +0300
+Subject: [PATCH] thionville accepting filtered url for autocomplete
+
+---
+ sites/all/modules/contrib/search_autocomplete/js/jquery.autocomplete.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/sites/all/modules/contrib/search_autocomplete/js/jquery.autocomplete.js b/sites/all/modules/contrib/search_autocomplete/js/jquery.autocomplete.js
+index 9020138..5f301ab 100644
+--- a/sites/all/modules/contrib/search_autocomplete/js/jquery.autocomplete.js
++++ b/sites/all/modules/contrib/search_autocomplete/js/jquery.autocomplete.js
+@@ -82,7 +82,7 @@
+ 		              }
+ 		              // Internal URL:
+ 		              else if (Drupal.settings.search_autocomplete[key].type == 'internal' || Drupal.settings.search_autocomplete[key].type == 'view') {
+-		                $.getJSON(Drupal.settings.search_autocomplete[key].datas, request, function (results) {
++		                $.getJSON(Drupal.settings.search_autocomplete[key].datas+'='+request.term, request, function (results) {
+ 		                  // Only return the number of values set in the settings.
+ 		                  if (results.length) {
+ 	                	    results.slice(0, Drupal.settings.search_autocomplete[key].max_sug);
+-- 
+2.9.2.windows.1
+

@@ -1,0 +1,54 @@
+name = 'Calitom'
+description = Uses the Bootstrap Framework Less source files and must be compiled.
+core = 7.x
+base theme = bootstrap
+
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Regions
+;;;;;;;;;;;;;;;;;;;;;
+
+regions[navigation]     = 'Navigation'
+regions[header]         = 'Top'
+regions[highlighted]    = 'Highlighted'
+regions[help]           = 'Help'
+regions[content]        = 'Content'
+regions[sidebar_first]  = 'Primary'
+regions[sidebar_second] = 'Secondary'
+regions[bottom_1]       = 'Bottom 1'
+regions[bottom_2]       = 'Bottom 2'
+regions[bottom_3]       = 'Bottom 3'
+regions[footer_top]     = 'Footer Top'
+regions[footer]         = 'Footer'
+regions[page_top]       = 'Page top'
+regions[page_bottom]    = 'Page bottom'
+
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Stylesheets
+;;;;;;;;;;;;;;;;;;;;;
+
+stylesheets[all][] = less/style.less
+
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Scripts
+;;;;;;;;;;;;;;;;;;;;;
+
+scripts[] = 'js/menu_slider.js'
+scripts[] = 'js/bef_alter.js'
+scripts[] = 'bootstrap/js/affix.js'
+scripts[] = 'bootstrap/js/alert.js'
+scripts[] = 'bootstrap/js/button.js'
+scripts[] = 'bootstrap/js/carousel.js'
+scripts[] = 'bootstrap/js/collapse.js'
+scripts[] = 'bootstrap/js/dropdown.js'
+scripts[] = 'bootstrap/js/modal.js'
+scripts[] = 'bootstrap/js/tooltip.js'
+scripts[] = 'bootstrap/js/popover.js'
+scripts[] = 'bootstrap/js/scrollspy.js'
+scripts[] = 'bootstrap/js/tab.js'
+scripts[] = 'bootstrap/js/transition.js'
+
+; Disable the CDN provider so compiled source files can be used.
+settings[bootstrap_cdn] = ''
